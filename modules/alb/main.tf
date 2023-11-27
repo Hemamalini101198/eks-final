@@ -10,39 +10,7 @@ resource "aws_lb" "alb" {
   subnets = [var.public1_subnet_cidr,var.public2_subnet_cidr ]
 }
 
-/*
-#CREATING SG FOR ALB
-resource "aws_security_group" "alb-sg" {
-  name        = "eks-alb-sg"
-  description = "allow inbound http traffic"
-  #vpc_id      = var.vpc_cidr
-  
 
-  ingress {
-    description = "from my ip range"
-    from_port   = "443"
-    to_port     = "443"
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"]
-  }
-  ingress {
-    description = "from my ip range"
-    from_port   = "80"
-    to_port     = "80"
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"]
-  }
-  egress {
-    from_port   = "0"
-    to_port     = "0"
-    protocol    = "-1" 
-    cidr_blocks = ["10.0.0.0/16"]
-  }
-  tags = {
-    "Name" = "eks-alb-sg"
-  }
-}
-*/
 
 #creating a listener on a port 80 with redirect action
 resource "aws_lb_listener" "alb_listener" {
@@ -60,7 +28,6 @@ resource "aws_lb_listener" "alb_listener" {
     }  
   }
 } 
-
 
 /*
 #creating a listener on a port 443 with forward action
