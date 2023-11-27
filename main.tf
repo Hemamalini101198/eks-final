@@ -34,7 +34,7 @@ module "alb" {
 module "eks_cluster" {
   source        = "./modules/eks"
   cluster_name  = "eks-cluster"
-  eks-node = "eks-managed-node"
+  eks-node = var.eks_node_name
   sg_id = module.sg.sg_vpc_id
   private1_subnet_cidr = module.vpc.private1_subnet_id
   private2_subnet_cidr = module.vpc.private2_subnet_id
