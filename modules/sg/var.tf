@@ -7,7 +7,7 @@ variable "project_name_env" {
   type        = string  
 }
 
-variable "vpc_cidr"{
+variable "cidr_block"{
   description = "vpc cidr range"
   type = string
 }
