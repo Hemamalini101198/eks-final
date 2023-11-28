@@ -6,7 +6,7 @@ resource "aws_security_group" "my-eks-sg" {
     from_port   = 0
     to_port     = 65535
     protocol    = "tcp"
-    cidr_blocks = var.vpc_cidr
+    cidr_blocks = var.cidr_block
   } 
 
   egress {
