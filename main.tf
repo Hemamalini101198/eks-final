@@ -1,7 +1,7 @@
 provider "aws" {
   region = var.region 
 }
-
+/*
 module "alb" {
   source           = "./modules/alb"
   alb_name         = var.alb_name
@@ -10,7 +10,7 @@ module "alb" {
   public2_subnet_cidr = var.public2_subnet_id
   sg_id = var.sg_id
 }
-
+*/
 module "eks_cluster" {
   source        = "./modules/eks"
   cluster_name  = var.cluster_name
