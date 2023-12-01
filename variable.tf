@@ -10,6 +10,12 @@ variable "cluster_name" {
 variable "private1_subnet_id" {
   type = string
 }
+variable "private1_subnet_cidr" {
+  type = string
+}
+variable "private2_subnet_cidr" {
+  type = string
+}
 
 variable "private2_subnet_id" {
   type = string
