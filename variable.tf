@@ -30,12 +30,12 @@ variable "vpc_id" {
 variable "sg_id" {
   type = string
 }
-
+/*
 variable "alb_name" {
   description = "Name for the ALB"
   type        = string
 }
-
+*/
 variable "desired_nodes" {
   description = "Number of managed node desired size"
   type        = number
