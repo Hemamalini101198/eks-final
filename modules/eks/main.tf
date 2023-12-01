@@ -26,7 +26,7 @@ resource "aws_eks_cluster" "eks" {
   name     = var.cluster_name
   role_arn = aws_iam_role.eks_cluster.arn
   vpc_config {
-    subnet_ids = [var.private1_subnet_cidr, var.private2_subnet_cidr]
+    subnet_ids = [var.private1_subnet_id, var.private2_subnet_id]
   }
   tags = {
     name = "${var.project_name_env}-eks-cluster"
