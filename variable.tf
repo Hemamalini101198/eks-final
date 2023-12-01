@@ -1,31 +1,31 @@
-variable "vpc_name" {
-  description = "Name for the VPC"
-  type        = string
+
+variable "cluster_name" {
+  type = string
+  
 }
 
-variable "cidr_block" {
-  description = "CIDR block for the VPC"
-  type        = string
+variable "private1_subnet_id" {
+  type = string
 }
 
-variable "public1_subnet_cidr" {
-  description = "CIDR blocks for public subnets"
-  type        = string
+variable "private2_subnet_id" {
+  type = string
 }
 
-variable "public2_subnet_cidr" {
-  description = "CIDR blocks for public subnets"
-  type        = string
+variable "public1_subnet_id" {
+  type = string
 }
 
-variable "private1_subnet_cidr" {
-  description = "CIDR blocks for private subnets"
-  type        = string
+variable "public2_subnet_id" {
+  type = string
 }
 
-variable "private2_subnet_cidr" {
-  description = "CIDR blocks for private subnets"
-  type        = string
+variable "vpc_id" {
+  type = string
+}
+
+variable "sg_id" {
+  type = string
 }
 
 variable "alb_name" {
