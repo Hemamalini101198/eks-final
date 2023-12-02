@@ -79,9 +79,9 @@ resource "aws_eks_node_group" "eks_node_group" {
 
   node_role_arn          = aws_iam_role.eks_node_group.arn
 
-  instance_types = ["m6g.xlarge"]
-  capacity_type  = "ON_DEMAND"  
-  ami_type = "AL2_ARM_64"
+  instance_types = var.instance_types
+  capacity_type  = var.capacity_type
+  ami_type = var.ami_type
 
   tags = {
     name = "${var.project_name_env}-eks-worker-node"
