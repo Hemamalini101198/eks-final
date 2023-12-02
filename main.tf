@@ -16,6 +16,8 @@ module "eks_cluster" {
   cluster_name  = var.cluster_name
   eks-node = "eks-managed-node"
   sg_id = var.sg_id
+  capacity_type = var.capacity_type
+  instance_types = var.instance_types
   private1_subnet_cidr = var.private1_subnet_id
   private2_subnet_cidr = var.private2_subnet_id
   public1_subnet_id =  var.public1_subnet_id
@@ -25,5 +27,6 @@ module "eks_cluster" {
   min_nodes = var.min_nodes
   max_nodes = var.max_nodes
   project_name_env = var.project_name_env
-  
+  ami_type = var.ami_type  
 }
+
