@@ -54,6 +54,18 @@ variable "project_name_env" {
   description = "project_name_env"
   type        = string  
 }
+
+variable "instance_types" {
+  type = list(string)
+}
+
+variable "capacity_type" {
+  type = string
+}
+
+variable "ami_type" {
+  type = string
+}
 /*
 variable "eks_node_name"{
   description = "name for the managed node"
