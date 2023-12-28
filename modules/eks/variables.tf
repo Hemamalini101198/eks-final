@@ -58,7 +58,7 @@ variable "project_name_env" {
 }
 
 variable "instance_types" {
-  type = list(string)
+  type = string
 }
 
 variable "capacity_type" {
